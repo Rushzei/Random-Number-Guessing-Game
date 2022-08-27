@@ -1,5 +1,6 @@
 // import the random library
 import java.util.Random;
+// import the scanner library
 import java.util.Scanner;
 
 class randomNumber{
