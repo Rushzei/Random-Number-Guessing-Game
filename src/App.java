@@ -20,18 +20,26 @@ class randomNumber{
         while (correctNumber == false && tries > 0)   {
             //initiate the scanner
             Scanner scanner = new Scanner(System.in);
+            //Takes away one try for every failed attempt
             tries = (tries-1);
-            //
+            //sets input equal to the number you enter
             int input = scanner.nextInt();
+            //checks to see if the random number(num) is equal to the number inputted(input)
             if (num == input) {
+                //Just prints out a message congradulating them
                 System.out.println("You guessed it! Great job!");
+                //sets correct number to true so it breaks the while loop
                 correctNumber = true;
+                //insures that it breaks the loop
                 break;
+                //If tries is greater than 0 it will tell them how many tries they have left
             } else if(tries > 0) {
+                //prints the trys they have remaining
                 System.out.println("You got it wrong. Try again! You have " + tries + " tries left" );
         }
-    }
+    }   // if they run out of tries it will go into this loop
         if (tries == 0) {
+            //Lets them know what the number was
             System.out.println("Nice try! The number was " + num + " Feel free to try again!");
             
         }
